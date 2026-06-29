@@ -1,0 +1,21 @@
+{
+  "name": "HI-TECH CHRONICLES",
+  "short_name": "Hi-Tech",
+  "description": "Premium App Store and Download Center for Apps, Templates, and Resources.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6b21a8",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
