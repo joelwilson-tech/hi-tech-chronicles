@@ -9,11 +9,14 @@ let isActive = false;
 window.FirebaseManager = {
     init: () => {
         try {
-            if (typeof firebaseConfig !== 'undefined' && firebaseConfig.apiKey !== "YOUR_API_KEY") {
-                app = initializeApp(firebaseConfig);
+            const config = window.firebaseConfig;
+
+            if (config && config.apiKey && config.apiKey !== "YOUR_API_KEY") {
+                app = initializeApp(config);
                 db = getFirestore(app);
                 auth = getAuth(app);
                 storage = getStorage(app);
+
                 isActive = true;
                 console.log("Firebase Modular SDK initialized successfully.");
             } else {
@@ -25,15 +28,28 @@ window.FirebaseManager = {
             isActive = false;
         }
     },
+
     isActive: () => isActive,
     getDb: () => db,
     getAuth: () => auth,
     getStorage: () => storage,
-    
-    // Expose Modular Functions for other scripts to use
+
     api: {
-        signInWithEmailAndPassword, signOut, onAuthStateChanged,
-        collection, getDocs, getDoc, doc, setDoc, addDoc, deleteDoc, updateDoc,
-        ref, uploadBytes, getDownloadURL
+        signInWithEmailAndPassword,
+        signOut,
+        onAuthStateChanged,
+
+        collection,
+        getDocs,
+        getDoc,
+        doc,
+        setDoc,
+        addDoc,
+        deleteDoc,
+        updateDoc,
+
+        ref,
+        uploadBytes,
+        getDownloadURL
     }
 };
