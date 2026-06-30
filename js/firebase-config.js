@@ -1,10 +1,18 @@
-// firebase-config.js
-// Holds the Firebase configuration (using free tier Spark plan)
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDtEUsf3QRYPeMYKbQJjnqbk4HsibeeF1c",
+  authDomain: "hi-tech-chronicles.firebaseapp.com",
+  projectId: "hi-tech-chronicles",
+  storageBucket: "hi-tech-chronicles.firebasestorage.app",
+  messagingSenderId: "916960403928",
+  appId: "1:916960403928:web:eb925973b744c9bac492ad"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
